@@ -13,11 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView(topColor: .blue, bottomColor: CustomColor.LighterBlue)
+            BackgroundView(topColor: isNight ? .black : .blue,
+                           bottomColor: isNight ? .gray : CustomColor.LighterBlue)
             
             VStack {
                 CityTextView(cityName: "Ottawa, ON")
-                MainTemperatureView(iconName: "cloud.sun.fill", temperature: 5)
+                MainTemperatureView(iconName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 5)
                 
                 HStack (spacing: 20) {
                     // day 1
@@ -40,7 +41,7 @@ struct ContentView: View {
                 
                 VStack {
                     Button() {
-                        print("click")
+                        isNight.toggle()
                     } label: {
                         WeatherButton(title: "Change time of day", textColor: .blue,
                                       backgroundColor: .white)
