@@ -15,3 +15,8 @@ struct SUI_WeatherApp: App {
         }
     }
 }
+
+// custom colors
+struct CustomColor {
+    static var LighterBlue: Color = Color("LighterBlue")
+}
