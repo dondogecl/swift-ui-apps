@@ -7,4 +7,4 @@ I will add later screenshots or videos of some of the apps and list the changes 
 
 ## Weather App
 
-![Weather app preview](preview/1_weather_app_02.png "UI preview" | width=200)
+<img src="preview/1_weather_app_02.png" alt="Weather app UI" width="200">
